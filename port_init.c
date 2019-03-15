@@ -19,7 +19,7 @@ void Port_Init(uint8 port_index)
 	else if(port_index == PORTC_INDEX)
 	{
 		GPIOC->LOCK |= 0x4C4F434B;
-		GPIOC->DEN |= 0xFF;
+		GPIOC->DEN |= 0xF0;
 	}
 	else if(port_index == PORTD_INDEX)
 	{
