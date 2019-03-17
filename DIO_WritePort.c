@@ -7,7 +7,7 @@ void DIO_WritePort(uint8 port_index, uint8 pins_mask, Dio_LevelType pins_level)
 {
   if(pins_level == STD_HIGH)
   {
-    if(port_index == PORTA_INDEX)		    GPIO_PORTA_DATA_R |= pins_mask;
+    if(port_index == PORTA_INDEX)		   GPIO_PORTA_DATA_R |= pins_mask;
     else if(port_index == PORTB_INDEX)	GPIO_PORTB_DATA_R |= pins_mask;
     else if(port_index == PORTC_INDEX)	GPIO_PORTC_DATA_R |= pins_mask;
     else if(port_index == PORTD_INDEX)	GPIO_PORTD_DATA_R |= pins_mask;
@@ -17,7 +17,7 @@ void DIO_WritePort(uint8 port_index, uint8 pins_mask, Dio_LevelType pins_level)
   
   else if(pins_level == STD_LOW)
   {
-    if(port_index == PORTA_INDEX)		    GPIO_PORTA_DATA_R &= ~pins_mask;
+    if(port_index == PORTA_INDEX)		   GPIO_PORTA_DATA_R &= ~pins_mask;
     else if(port_index == PORTB_INDEX)	GPIO_PORTB_DATA_R &= ~pins_mask;
     else if(port_index == PORTC_INDEX)	GPIO_PORTC_DATA_R &= ~pins_mask;
     else if(port_index == PORTD_INDEX)	GPIO_PORTD_DATA_R &= ~pins_mask;
