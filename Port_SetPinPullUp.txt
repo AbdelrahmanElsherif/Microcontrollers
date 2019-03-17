@@ -1,0 +1,44 @@
+
+#include "typedefs.h"
+#include "dio.h"
+#include "port.h"
+#include "tm4c123gh6pm.h"
+
+void Port_SetPinPullUp( uint8 port_index ,uint8 pins_mask ,uint8 enable)
+{
+
+ if ( enable ==1 )
+  {	
+	if(port_index == PORTA_INDEX)		GPIOA->PUR &= pins_mask; 
+	else if(port_index == PORTB_INDEX)	GPIOB->PUR &= pins_mask; 
+	else if(port_index == PORTC_INDEX)	GPIOC->PUR &= pins_mask;  
+	else if(port_index == PORTD_INDEX)	GPIOD->PUR &= pins_mask; 
+	else if(port_index == PORTE_INDEX)	GPIOE->PUR &= pins_mask; 
+	else if(port_index == PORTF_INDEX)	GPIOF->PUR &= pins_mask; 
+  }
+
+ else 
+{
+	
+	if(port_index == PORTA_INDEX)		GPIOA->PUR &= (~pins_mask); 
+	else if(port_index == PORTB_INDEX)	GPIOB->PUR &= (~pins_mask); 
+	else if(port_index == PORTC_INDEX)	GPIOC->PUR &= (~pins_mask);  
+	else if(port_index == PORTD_INDEX)	GPIOD->PUR &= (~pins_mask); 
+	else if(port_index == PORTE_INDEX)	GPIOE->PUR &= (~pins_mask); 
+	else if(port_index == PORTF_INDEX)	GPIOF->PUR &= (~pins_mask);
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+}
