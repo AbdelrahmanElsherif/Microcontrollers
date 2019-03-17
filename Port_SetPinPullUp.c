@@ -20,12 +20,12 @@ void Port_SetPinPullUp( uint8 port_index ,uint8 pins_mask ,uint8 enable)
  else if( enable ==0)
  {
 	
-	if(port_index == PORTA_INDEX)		GPIO_PORTA_PUR_R         |= (~pins_mask); 
-	else if(port_index == PORTB_INDEX)	GPIO_PORTB_PUR_R         |= (~pins_mask); 
-	else if(port_index == PORTC_INDEX)	GPIO_PORTC_PUR_R         |= (~pins_mask);  
-	else if(port_index == PORTD_INDEX)	GPIO_PORTD_PUR_R         |= (~pins_mask); 
-	else if(port_index == PORTE_INDEX)	GPIO_PORTE_PUR_R         |= (~pins_mask); 
-	else if(port_index == PORTF_INDEX)	GPIO_PORTF_PUR_R         |= (~pins_mask);
+	if(port_index == PORTA_INDEX)		GPIO_PORTA_PUR_R         &= (~pins_mask); 
+	else if(port_index == PORTB_INDEX)	GPIO_PORTB_PUR_R         &= (~pins_mask); 
+	else if(port_index == PORTC_INDEX)	GPIO_PORTC_PUR_R         &= (~pins_mask);  
+	else if(port_index == PORTD_INDEX)	GPIO_PORTD_PUR_R         &= (~pins_mask); 
+	else if(port_index == PORTE_INDEX)	GPIO_PORTE_PUR_R         &= (~pins_mask); 
+	else if(port_index == PORTF_INDEX)	GPIO_PORTF_PUR_R         &= (~pins_mask);
 
  }
 }
