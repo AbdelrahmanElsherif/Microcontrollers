@@ -17,12 +17,12 @@ if ( enable ==1 )
 else if ( enable == 0)
  {
 	
-	if(port_index == PORTA_INDEX)		GPIO_PORTA_PDR_R        |= (~pins_mask); 
-	else if(port_index == PORTB_INDEX)	GPIO_PORTB_PDR_R        |= (~pins_mask); 
-	else if(port_index == PORTC_INDEX)	GPIO_PORTC_PDR_R        |= (~pins_mask);  
-	else if(port_index == PORTD_INDEX)	GPIO_PORTD_PDR_R        |= (~pins_mask); 
-	else if(port_index == PORTE_INDEX)	GPIO_PORTE_PDR_R        |= (~pins_mask); 
-	else if(port_index == PORTF_INDEX)	GPIO_PORTF_PDR_R        |= (~pins_mask);
+	if(port_index == PORTA_INDEX)		GPIO_PORTA_PDR_R        &= (~pins_mask); 
+	else if(port_index == PORTB_INDEX)	GPIO_PORTB_PDR_R        &= (~pins_mask); 
+	else if(port_index == PORTC_INDEX)	GPIO_PORTC_PDR_R        &= (~pins_mask);  
+	else if(port_index == PORTD_INDEX)	GPIO_PORTD_PDR_R        &= (~pins_mask); 
+	else if(port_index == PORTE_INDEX)	GPIO_PORTE_PDR_R        &= (~pins_mask); 
+	else if(port_index == PORTF_INDEX)	GPIO_PORTF_PDR_R        &= (~pins_mask);
 
   }
 }
