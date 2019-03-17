@@ -1,0 +1,17 @@
+#include "typedefs.h"
+#include "dio.h"
+#include "port.h"
+#include "tm4c123gh6pm.h"
+
+void DIO_FlipPort(uint8 port_index,uint8 pins_mask)
+{
+switch(port_index)
+{
+case PORTA_INDEX : GPIO_PORTA_DATA_R ^= pins_mask; break;
+case PORTB_INDEX : GPIO_PORTB_DATA_R ^= pins_mask; break;
+case PORTC_INDEX : GPIO_PORTC_DATA_R ^= pins_mask; break;
+case PORTD_INDEX : GPIO_PORTD_DATA_R ^= pins_mask; break;
+case PORTE_INDEX : GPIO_PORTE_DATA_R ^= pins_mask; break;
+case PORTF_INDEX : GPIO_PORTF_DATA_R ^= pins_mask; break;
+}
+}
