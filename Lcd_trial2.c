@@ -3,7 +3,7 @@
 #include "port.h"
 #include "tm4c123gh6pm.h"
 #include "project.h"
-#include "LCD.h"
+#include "lcd_trial2.h"
 
 	
 void lcd_init()
